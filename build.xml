@@ -1,0 +1,36 @@
+<project name="proyecto2" default="build" basedir=".">
+<description>Graficador de las estructuras de datos</description>
+
+<target name="compile">
+<mkdir dir="build"/>
+<javac srcdir="src" destdir="build" includeantruntime="true"/>
+</target>
+
+<target name="javadoc">
+<mkdir dir="docs"/>
+<javadoc sourcepath="src" destdir="docs"/>
+</target>
+
+<target name="jar" depends="compile">
+<jar destfile="MaurerRose.jar" basedir="build">
+<manifest>
+<attribute name="Main-Class"
+  value="Main"/>
+</manifest>
+</jar>
+</target>
+
+
+<target name="build" depends="compile,jar" >
+</target>
+
+<target name="clean" depends="build">
+<delete dir="docs" quiet="true"/>
+<delete dir="build" quiet="true"/>
+<delete dir="jar" quiet="true"/>
+</target>
+
+
+
+</project>
+
