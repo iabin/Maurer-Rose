@@ -7,8 +7,8 @@ Genera las estructuras conocidas como rosas de Maurer con un algoritmo único,</
   <IMG SRC="https://scontent-iad3-1.xx.fbcdn.net/v/t35.0-12/13271452_1086237084770566_1776257323_o.png?oh=66ef2e94329f27409ffac2d12c2dc7db&oe=57456C5F">
   Dejo la captura completa porque :v me da hueva cortarla y tengo que subir la imagen</br>
   <IMG SRC="https://scontent-iad3-1.xx.fbcdn.net/v/t35.0-12/13262314_1086237154770559_310558161_o.png?oh=6148e3910f8a530e9e2dd2cc7f23d038&oe=5744495D">
-  <B>TODAS LAS ROSAS SON GENERAS POR EL MISMO ALGORITMO</B>
-   <IMG SRC="https://scontent-iad3-1.xx.fbcdn.net/v/t35.0-12/13262314_1086237154770559_310558161_o.png?oh=6148e3910f8a530e9e2dd2cc7f23d038&oe=5744495D">
+  <B>TODAS LAS ROSAS SON GENERADAS POR EL MISMO ALGORITMO</B>
+   <Ihttps://scontent-iad3-1.xx.fbcdn.net/v/t35.0-12/13275291_1086237404770534_2027233379_o.png?oh=9b31854cb15865d85730af21255ce455&oe=57449CB7">
   <B><i>Disfruten de las rosas C:</br>
   Iabin</B></i>
   
