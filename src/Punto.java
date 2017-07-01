@@ -6,7 +6,7 @@ public class Punto {
         double y;
 
     /**
-     * Constructor Vacio, inicializa las variables en 0
+     * Empty constructor
      */
     public Punto() {
             x = 0;
@@ -14,9 +14,9 @@ public class Punto {
         }
 
     /**
-     * Constructor que inicializa en x y y
-     * @param radio Parametro x
-     * @param angulo Parametro Y
+     * Constructor
+     * @param radio Parameter x
+     * @param angulo Parameter Y
      */
         public Punto(double radio, double angulo) {
             x = radio;

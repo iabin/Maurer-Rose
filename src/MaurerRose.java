@@ -3,22 +3,22 @@ import SVG.*;
 /**
  * @author iabin
  * @version 1.0
- * Clase que modela a una MaurerRose y la dibuja en SVG
+ * Draws a MaurerRose un SVG
  */
 public class MaurerRose implements ImprimeSVG{
      int n;
      int d;
 
     /**
-     * Constructor vacio
+     * Empty Constructor
      */
     public MaurerRose() {
     }
 
     /**
-     * Constructor con los 2 parametros la n y la d
-     * @param n parametro n
-     * @param d parametro d
+     * Constructor whit two parameters 'n' and 'd'
+     * @param n parameter n
+     * @param d parameter d
      */
     public MaurerRose(int n, int d){
         this.n = n;
@@ -26,7 +26,7 @@ public class MaurerRose implements ImprimeSVG{
     }
 
     /**
-     * Metodo que imprime la rosa en SVG
+     * It prints the maurerRose
      */
     @Override
     public void imprimeSVG(){
