@@ -12,9 +12,9 @@
                                        https://en.wikipedia.org/wiki/Maurer_rose  <br>
 									   <b>Here there are some examples</b>
  
-  <img src="https://github.com/iabin/Maurer-Rose/blob/master/images/Screenshot_2017-07-01_01-03-22.png?raw=true">
-  <img src="https://github.com/iabin/Maurer-Rose/blob/master/images/Screenshot_2017-07-01_01-07-12.png?raw=true">
-  <img src="https://github.com/iabin/Maurer-Rose/blob/master/images/Screenshot_2017-07-01_01-08-03.png?raw=true">
-  <img src="https://github.com/iabin/Maurer-Rose/blob/master/images/Screenshot_2017-07-01_01-08-44.png?raw=true">
+  <img src="https://github.com/iabin/Maurer-Rose/blob/master/images/229.PNG?raw=true">  
+  <img src="https://github.com/iabin/Maurer-Rose/blob/master/images/671.PNG?raw=true">
+  <img src="https://github.com/iabin/Maurer-Rose/blob/master/images/719.PNG?raw=true">
+  <img src="https://github.com/iabin/Maurer-Rose/blob/master/images/729.PNG?raw=true">
   
   
