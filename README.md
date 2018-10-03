@@ -5,8 +5,8 @@
                              If you want to use this program please enter the following<br>
                                        java -jar MaurerRose.jar n d <br>
                                        where 'n' and 'd' are integers,<br>
-                                the output will be printed on the standard ouput<br>
-                                  If you're using a linux system, you can use<br>
+                                 output will be printed on the standard ouput<br>
+                                	 you can use<br>
                                      java -jar MaurerRose.jar n d > file.html <br>
                                     if you need more information, please check:<br>
                                        https://en.wikipedia.org/wiki/Maurer_rose  <br>
