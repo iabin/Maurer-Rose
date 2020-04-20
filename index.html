@@ -57,9 +57,10 @@
     <script>
 
         const canvas = document.getElementById("responsive-canvas")
-        canvas.width = window.innerWidth * .7;
-        canvas.height = window.innerWidth * .7;
-        size = window.innerWidth / 3;
+        let maxSide = window.innerWidth > window.innerHeight ? window.innerHeight :  window.innerWidth;
+        canvas.width = maxSide * .7;
+        canvas.height = maxSide * .7;
+        size = maxSide / 3;
         const ctx = canvas.getContext('2d');
         var sliderD = document.getElementById("d");
         var sliderN = document.getElementById("n");
