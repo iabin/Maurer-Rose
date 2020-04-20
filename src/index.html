@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maurer Rose Algorithm</title>
+    <style>
+        .slider {
+            -webkit-appearance: none;
+            width: 80%;
+            height: 15px;
+            border-radius: 5px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+            margin-bottom: 20px;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #4CAF50;
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #4CAF50;
+            cursor: pointer;
+        }
+
+        canvas {
+            border-style: solid;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Maurer Rose</h1>
+    <div>
+        <h1>D:</h1>
+        <input type="range" min="1" max="100" value="70" class="slider" id="n">
+    </div>
+    <div>
+        <h1>N:</h1>
+        <input type="range" min="0" max="360" value="71" class="slider" id="d">
+    </div>
+    <canvas id="responsive-canvas"></canvas>
+    <script>
+
+        const canvas = document.getElementById("responsive-canvas")
+        canvas.width = window.innerWidth * .7;
+        canvas.height = window.innerWidth * .7;
+        size = window.innerWidth / 3;
+        const ctx = canvas.getContext('2d');
+        var sliderD = document.getElementById("d");
+        var sliderN = document.getElementById("n");
+
+
+        function draw() {
+
+            let n = sliderN.value;
+            let d = sliderD.value;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.font = 'italic 38px Arial';
+            ctx.fillText('N:'+n, 30, 33); // text and position
+            ctx.fillText('D:'+d, canvas.width/2,33 ); // text and position
+            ctx.translate(canvas.width / 2, canvas.height / 2);
+            ctx.beginPath();
+            ctx.lineWidth = 0.5;
+            ctx.strokeStyle = 'blue';
+            for (let theta = 0; theta <= 360; theta++) {
+                let k = theta * d * Math.PI / 180;
+                let r = size * Math.sin(n * k);
+                let x = -r * Math.cos(k);
+                let y = -r * Math.sin(k);
+                ctx.lineTo(x, y);
+                ctx.moveTo(x, y);
+            }        
+            ctx.stroke();
+            ctx.translate(canvas.width / -2, canvas.height / -2);
+
+            window.requestAnimationFrame(draw)
+        }
+
+        window.requestAnimationFrame(draw)
+
+    </script>
+</body>
+
+</html>
