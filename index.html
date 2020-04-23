@@ -37,47 +37,77 @@
             cursor: pointer;
         }
 
-        h1, h2{text-align: center;}
+        h1,
+        h2 {
+            text-align: center;
+        }
 
-        canvas, input {
+        canvas,
+        input {
             border-style: solid;
             display: block;
             margin: 0 auto;
+        }
+
+        button {
+            height: 40px;
+            width: 100px;
+            margin: -20px -50px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            font-size: large;
+            margin-top: 30px;
         }
     </style>
 </head>
 
 <body>
     <h1>Maurer Rose</h1>
+
+    <h2>Rose Spikes N:</h2>
+    <input type="range" min="1" max="359" value="70" class="slider" id="n">
+
+    <h2>Degrees D:</h2>
+    <input type="range" min="1" max="359" value="71" class="slider" id="d">
+
     <div>
-        <h2>Rose Spikes  N:</h2>
-        <input type="range" min="1" max="359" value="70" class="slider" id="n">
+        <h1 id="text"></h1>
     </div>
-    <div>
-        <h2>Degrees D:</h2>
-        <input type="range" min="1" max="359" value="71" class="slider" id="d">
-    </div>
+
     <canvas id="responsive-canvas"></canvas>
+
+    <a id="download" download="maurer.png">
+        <button type="button" onClick="download()">Download</button>
+    </a>
     <script>
+        function download() {
+            var download = document.getElementById("download");
+            var image = document.getElementById("responsive-canvas").toDataURL("image/png")
+                .replace("image/png", "image/octet-stream");
+            download.setAttribute("href", image);
+        }
 
         const canvas = document.getElementById("responsive-canvas")
-        let maxSide = window.innerWidth > window.innerHeight ? window.innerHeight :  window.innerWidth;
-        canvas.width = maxSide * .7;
-        canvas.height = maxSide * .7;
-        size = maxSide / 3;
+        let maxSide = window.innerWidth > window.innerHeight ? window.innerHeight : window.innerWidth;
+        canvas.width = maxSide * .65;
+        canvas.height = maxSide * .65;
+        size = maxSide / 3.5;
         const ctx = canvas.getContext('2d');
         var sliderD = document.getElementById("d");
         var sliderN = document.getElementById("n");
-
+        var text = document.getElementById("text");
 
         function draw() {
 
             let n = sliderN.value;
             let d = sliderD.value;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.font = 'italic 38px Arial';
-            ctx.fillText('N:'+n, 30, 33); // text and position
-            ctx.fillText('D:'+d, canvas.width/2,33 ); // text and position
+
+            text.innerHTML = "<b>N: </b>" + n + "<b>         D: </b>" + d;
+
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            //ctx.fillRect(20, 20, 150, 100);
+            ctx.fillStyle = "#FFF";
             ctx.translate(canvas.width / 2, canvas.height / 2);
             ctx.beginPath();
             ctx.lineWidth = 0.5;
@@ -89,7 +119,7 @@
                 let y = -r * Math.sin(k);
                 ctx.lineTo(x, y);
                 ctx.moveTo(x, y);
-            }        
+            }
             ctx.stroke();
             ctx.translate(canvas.width / -2, canvas.height / -2);
 
