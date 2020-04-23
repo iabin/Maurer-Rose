@@ -105,9 +105,10 @@
 
             text.innerHTML = "<b>N: </b>" + n + "<b>         D: </b>" + d;
 
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            //ctx.fillRect(20, 20, 150, 100);
             ctx.fillStyle = "#FFF";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);//Prints white rect backgorund
+            //ctx.fillRect(20, 20, 150, 100); //Clean the canvas
+
             ctx.translate(canvas.width / 2, canvas.height / 2);
             ctx.beginPath();
             ctx.lineWidth = 0.5;
